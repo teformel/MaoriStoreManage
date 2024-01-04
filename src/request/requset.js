@@ -25,6 +25,7 @@ axiosInstance.interceptors.response.use(
   },
   (err) => {
     const data = err.response.data
+    console.log('data :>> ', data);
     if (data && data.msg && data.msg.includes('非法token')) {
       clearTokenData()
     }

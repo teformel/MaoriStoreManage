@@ -189,11 +189,6 @@ const rules = {
             message: '请输入手机号码',
             trigger: 'blur'
         }
-        // {
-        //   pattern: /^1[3456789]\d{9}$/,
-        //   message: '手机号格式不正确',
-        //   trigger: 'blur'
-        // }
     ],
     email: [
         {

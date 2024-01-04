@@ -49,6 +49,7 @@
         </el-form-item>
       </el-form>
     </FormDrawer>
+    <GoodsDrawer ref="GoodsDrawerRef" />
   </div>
 </template>
 
@@ -56,7 +57,8 @@
 import { Refresh } from '@element-plus/icons-vue'
 import { computed, reactive, ref } from 'vue'
 import { useStateStores } from '../../store/stateStores'
-import FormDrawer from '../../components/FormDrawer.vue.vue'
+import FormDrawer from '../../components/FormDrawer.vue'
+import GoodsDrawer from "../../components/goods/GoodsDrawer.vue";
 import { ElNotification } from 'element-plus'
 
 const useState = useStateStores()
@@ -66,7 +68,8 @@ getCategory()
 const form = reactive({
   name: ""
 })
-
+const GoodsDrawerRef = ref(null);
+const openGoodsDrawer = (data) => GoodsDrawerRef.value.open(data);
 const formDrawerRef = ref(null)
 
 const editId = ref(0);

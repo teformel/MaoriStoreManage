@@ -8,6 +8,7 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     AsideList: typeof import('./src/components/picture/AsideList.vue')['default']
+    ChooseGoods: typeof import('./src/components/goods/ChooseGoods.vue')['default']
     ElAside: typeof import('element-plus/es')['ElAside']
     ElAvatar: typeof import('element-plus/es')['ElAvatar']
     ElButton: typeof import('element-plus/es')['ElButton']
@@ -15,6 +16,7 @@ declare module 'vue' {
     ElCheckbox: typeof import('element-plus/es')['ElCheckbox']
     ElCol: typeof import('element-plus/es')['ElCol']
     ElContainer: typeof import('element-plus/es')['ElContainer']
+    ElDialog: typeof import('element-plus/es')['ElDialog']
     ElDivider: typeof import('element-plus/es')['ElDivider']
     ElDrawer: typeof import('element-plus/es')['ElDrawer']
     ElDropdown: typeof import('element-plus/es')['ElDropdown']
@@ -50,6 +52,7 @@ declare module 'vue' {
     ElUpload: typeof import('element-plus/es')['ElUpload']
     FormDrawer: typeof import('./src/components/FormDrawer.vue')['default']
     'FormDrawer.vue': typeof import('./src/components/FormDrawer.vue.vue')['default']
+    GoodsDrawer: typeof import('./src/components/goods/GoodsDrawer.vue')['default']
     ImageAside: typeof import('./src/components/picture/ImageAside.vue')['default']
     ImageMain: typeof import('./src/components/picture/ImageMain.vue')['default']
     ListHeader: typeof import('./src/components/ListHeader.vue')['default']

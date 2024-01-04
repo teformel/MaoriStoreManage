@@ -36,4 +36,15 @@ defineProps({
 defineEmits(["edit", "delete"]);
 </script>
   
-<style></style>
+<style>
+.aside-list {
+    border-bottom: 1px solid #f4f4f4;
+    cursor: pointer;
+    @apply flex items-center p-3 text-sm text-gray-600;
+}
+
+.aside-list:hover,
+.active {
+    @apply bg-blue-50;
+}
+</style>

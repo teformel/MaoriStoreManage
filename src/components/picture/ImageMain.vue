@@ -139,5 +139,35 @@ defineExpose({
     openUploadFile
 })
 </script>
-<style></style>
+<style>
+.image-main {
+    position: relative;
+}
+
+.image-main .top {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 50px;
+    overflow-y: auto;
+}
+
+.image-main .bottom {
+    position: absolute;
+    bottom: 0;
+    height: 50px;
+    left: 0;
+    right: 0;
+    @apply flex items-center justify-center;
+}
+
+.image-title {
+    position: absolute;
+    top: 122px;
+    left: -1px;
+    right: -1px;
+    @apply text-sm truncate text-gray-100 bg-opacity-50 bg-gray-800 px-2 py-1;
+}
+</style>
   
