@@ -51,7 +51,19 @@
           </template>
         </el-table-column>
         <el-table-column label="总库存" prop="stock" align="center"></el-table-column>
-        <el-table-column label="操作" align="center"></el-table-column>
+        <el-table-column label="操作" align="center">
+          <template #default>
+            <el-button aria-disabled="false" size="small" class=" el-button el-button--primary el-button--small
+              is-text px-1">编辑商品</el-button>
+            <el-popconfirm title="是否要删除该商品？" confirmButtonText="确认" cancelButtonText="取消"
+              @confirm="handleDelete([scope.row.id])">
+              <template #reference>
+                <el-button class="px-1" text type="primary" size="small">删除商品</el-button>
+              </template>
+            </el-popconfirm>
+
+          </template>
+        </el-table-column>
       </el-table>
     </div>
     <div class="pages">
@@ -115,8 +127,8 @@
       </template>
       <template #footer>
         <div style="flex: auto">
-          <el-button>cancel</el-button>
-          <el-button type="primary">confirm</el-button>
+          <el-button>取消</el-button>
+          <el-button type="primary">新增</el-button>
         </div>
       </template>
     </el-drawer>

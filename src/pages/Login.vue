@@ -1,43 +1,46 @@
 <template>
   <el-row class="login-container">
     <el-col :lg="16" :md="12" class="left">
-      <div>
-        <div>欢迎光临</div>
-        <div>MaoriStoreManage</div>
-      </div>
+      <!-- <div> -->
+      <!-- <div>欢迎光临</div> -->
+      <div class="text-light-500">MaoriStoreManage</div>
+      <!-- </div> -->
     </el-col>
-    <el-col :lg="8" :md="12" class="right">
-      <h2 class="title">欢迎回来</h2>
-      <div>
-        <span class="line"></span>
-        <span>账号密码登录</span>
-        <span class="line"></span>
-      </div>
-      <el-form ref="ruleFormRef" :rules="rules" :model="form" class="w-[250px]">
-        <el-form-item prop="username">
-          <el-input v-model="form.username" placeholder="请输入用户名">
-            <template #prefix>
-              <el-icon>
-                <user />
-              </el-icon>
-            </template>
-          </el-input>
-        </el-form-item>
-        <el-form-item prop="password">
-          <el-input type="password" v-model="form.password" placeholder="请输入密码" show-password>
-            <template #prefix>
-              <el-icon>
-                <lock />
-              </el-icon>
-            </template>
-          </el-input>
-        </el-form-item>
-        <el-form-item>
-          <el-button round color="#626aef" class="w-[250px]" type="primary" @click="submitForm(ruleFormRef)"
-            :loading="loading">登
-            录</el-button>
-        </el-form-item>
-      </el-form>
+    <el-col :lg="24" :md="24" class="right">
+      <el-card class="box-card h-[342px] w-[442px]">
+        <h2 class="title">欢迎登录</h2>
+        <div>
+          <span class="line"></span>
+          <span>账号密码登录</span>
+          <span class="line"></span>
+        </div>
+        <el-form ref="ruleFormRef" :rules="rules" :model="form" class="w-[250px]">
+          <el-form-item prop="username">
+            <el-input v-model="form.username" placeholder="请输入用户名">
+              <template #prefix>
+                <el-icon>
+                  <user />
+                </el-icon>
+              </template>
+            </el-input>
+          </el-form-item>
+          <el-form-item prop="password">
+            <el-input type="password" v-model="form.password" placeholder="请输入密码" show-password>
+              <template #prefix>
+                <el-icon>
+                  <lock />
+                </el-icon>
+              </template>
+            </el-input>
+          </el-form-item>
+          <el-form-item>
+            <el-button round color="#626aef" class="w-[250px]" type="primary" @click="submitForm(ruleFormRef)"
+              :loading="loading">登
+              录</el-button>
+          </el-form-item>
+        </el-form>
+      </el-card>
+
     </el-col>
   </el-row>
 </template>
@@ -92,7 +95,7 @@ const submitForm = async (formEl: FormInstance | undefined) => {
 
 <style scoped>
 .login-container {
-  @apply min-h-screen bg-indigo-500;
+  @apply min-h-screen bg-blue-500;
 }
 
 .login-container .left,

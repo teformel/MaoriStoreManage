@@ -6,3 +6,8 @@ export function login(username, password) {
         password
     })
 }
+export function addUser(UserData) {
+    return axios.post("/user", {
+        ...UserData
+    })
+}
