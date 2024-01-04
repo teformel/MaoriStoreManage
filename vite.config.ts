@@ -17,15 +17,16 @@ export default defineConfig({
     }),
     WindiCSS(),
   ],
-  resolve: {
-    alias: {
-      "~": path.resolve(__dirname, "src")
-    }
-  },
+  // resolve: {
+  //   alias: {
+  //     "@": path.resolve(__dirname, "src"),
+  //     "~": path.resolve(__dirname, "src")
+  //   }
+  // },
   server: {
     proxy: {
       '/api': {
-        target: 'http://ceshi13.dishait.cn',
+        target: 'http://ceshi13.dishait.cn/admin',
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, '')
       },

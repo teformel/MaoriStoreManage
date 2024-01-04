@@ -1,13 +1,8 @@
-import http from "../axios";
+import axios from './requset'
 
-function getUserList(page, keyword) {
-  return http.get("/user/" + page, {
-    params: {
-      keyword,
-    },
-  });
+export function login(username, password) {
+    return axios.post("/login", {
+        username,
+        password
+    })
 }
-
-export default {
-  getUserList,
-};

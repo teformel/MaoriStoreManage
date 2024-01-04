@@ -1,6 +1,6 @@
 import { createRouter, createWebHashHistory } from "vue-router";
-import Login from "~/pages/Login.vue";
-import Register from "~/pages/Register.vue";
+import Login from "../pages/Login.vue";
+import Register from "../pages/Register.vue";
 import Home from "../layout/Home.vue";
 import GoodList from "../pages/goods/GoodList.vue";
 import GoodCategory from "../pages/goods/GoodCategory.vue";
@@ -11,7 +11,7 @@ import PictureCategory from "../pages/picture/PictureCategory.vue";
 const routes = [
   {
     path: "/",
-    component: Login,
+    component: Home,
     children: [
       {
         path: "goodlist",
@@ -46,10 +46,6 @@ const routes = [
   {
     path: "/register",
     component: Register,
-  },
-  {
-    path: "/home",
-    component: Home,
   },
 ];
 
