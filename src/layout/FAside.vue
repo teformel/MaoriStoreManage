@@ -51,7 +51,7 @@ const menuList = [
         icon: "Picture",
         children: [
             {
-                name: "图片列表",
+                name: "公告列表",
                 icon: "PictureFilled",
                 path: "/piclist"
             }, {
